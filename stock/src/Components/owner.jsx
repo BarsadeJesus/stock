@@ -10,54 +10,54 @@ const Owner = () => {
     const [dataOwner, setDataOwner] = useState(data)
    
     const maxSale = () => {
-       const arrSells= dataOwner.map(item=>item.sell)
+       const arrSells= data.map(item=>item.sell)
+       console.log(arrSells)
        const maxdd=Math.max(...arrSells)
        console.log(maxdd)
        const indexMax = arrSells.indexOf(maxdd)
        console.log(indexMax)
-       console.log(dataOwner[indexMax])
-       const objMax= dataOwner[indexMax]
+       console.log(data[indexMax])
+       const objMax= data[indexMax]
        console.log(objMax)
        setDataOwner([objMax])
     }
     const maxUnits = () => {
-        const arrUnids= dataOwner.map(item=>item.unids)
+        const arrUnids= data.map(item=>item.unids)
         const maxUnids=Math.max(...arrUnids)
         console.log(maxUnids)
         const indexMax = arrUnids.indexOf(maxUnids)
         console.log(indexMax)
-        console.log(dataOwner[indexMax])
-        const objMax= dataOwner[indexMax]
+        console.log(data[indexMax])
+        const objMax= data[indexMax]
         console.log(objMax)
         setDataOwner([objMax])
      }
     const minSale = () => {
-        const arrSells= dataOwner.map(item=>item.sell)
+        const arrSells= data.map(item=>item.sell)
         const mindd=Math.min(...arrSells)
         console.log(mindd)
         const indexMin = arrSells.indexOf(mindd)
         console.log(indexMin)
-        console.log(dataOwner[indexMin])
-        const objMin= dataOwner[indexMin]
+        console.log(data[indexMin])
+        const objMin= data[indexMin]
         console.log(objMin)
         setDataOwner([objMin])
      }
      const minUnits = () => {
-        const arrUnits= dataOwner.map(item=>item.unids)
+        const arrUnits= data.map(item=>item.unids)
         const mindd=Math.min(...arrUnits)
         console.log(mindd)
         const indexMin = arrUnits.indexOf(mindd)
         console.log(indexMin)
-        console.log(dataOwner[indexMin])
-        const objMin= dataOwner[indexMin]
+        console.log(data[indexMin])
+        const objMin= data[indexMin]
         console.log(objMin)
         setDataOwner([objMin]) 
      }
      const ascOrderUnits = () => {
          const datasort = dataOwner.sort((a,b) => b.unids-a.unids)
         console.log(datasort)
-        setDataOwner(datasort)
-       
+        setDataOwner(datasort)  
      }
     return(
         <div>
