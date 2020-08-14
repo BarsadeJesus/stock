@@ -49,7 +49,6 @@ const Owner = () => {
         console.log(mindd)
         const indexMin = arrUnits.indexOf(mindd)
         console.log(indexMin)
-        console.log(data[indexMin])
         const objMin= data[indexMin]
         console.log(objMin)
         setDataOwner([objMin]) 
